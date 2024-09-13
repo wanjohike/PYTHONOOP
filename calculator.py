@@ -17,6 +17,9 @@ def calculate():
         display.delete(0,tk.END)
         display.insert(tk.END,'Error')
 
+def theme_select(theme):
+    if theme == 'dark':
+        root.configure(bg=#33333)#complete from here
 #Create the main window. you can call it nythintg, for instance main, being its the first window
   
 root=tk.Tk()
@@ -24,7 +27,7 @@ root.title('Calculator')
 root.geometry('400x500')
 root.resizable(False,False)# the window will not be resized
 root.configure(bg='#ADD8E6')# set background color of the window
-#see if you can define a function to allow users to change their background color for line 26
+#see if you can define a function to allow users to change their background color for line 26 - try this
 display=tk.Entry(root,font=('Arial',24), borderwidth=5, relief='flat',justify='right')
 display.pack(pady=20,padx=20,fill='both')
 buttons=[
